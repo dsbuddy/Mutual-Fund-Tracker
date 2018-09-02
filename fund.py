@@ -77,14 +77,49 @@ def getCusip3(jsonObj, ticker):
 
 def getData2(content, ticker):
 	data = {}
-	data['net'] = content['DetailsData']['detailDataList'][0]['expRatioGross']['value']
-	data['star'] = content['MStarRatingsData']['stardata'][0]['starOverallRating']
-	data['category'] = content['FundInformationData']['fundInformationData']['mstarCtgyName']
-	data['ytd'] = content['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['cumulativeReturnsYtd']
-	data['1yr'] = content['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns1yr']
-	data['3yr'] = content['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns3yr']
-	data['5yr'] = content['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns5yr']
-	data['10yr'] = content['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns10yr']
+	try:
+		data['net'] = content['DetailsData']['detailDataList'][0]['expRatioGross']['value']
+	except:
+		data['net'] = "N/A"
+	try:
+		data['star'] = content['MStarRatingsData']['stardata'][0]['starOverallRating']
+	except:
+		data['star'] = "N/A"
+
+	try:
+		data['category'] = content['FundInformationData']['fundInformationData']['mstarCtgyName']
+	except:
+		data['category'] = "N/A"
+
+	try:
+		data['ytd'] = content['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['cumulativeReturnsYtd']
+	except:
+		data['ytd'] = "N/A"
+
+	try:
+		data['net'] = content['DetailsData']['detailDataList'][0]['expRatioGross']['value']
+	except:
+		data['net'] = "N/A"
+
+	try:
+		data['1yr'] = content['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns1yr']
+	except:
+		data['1yr'] = "N/A"
+	
+	try:
+		data['3yr'] = content['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns3yr']
+	except:
+		data['3yr'] = "N/A"
+
+	try:
+		data['5yr'] = content['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns5yr']
+	except:
+		data['5yr'] = "N/A"
+	
+	try:
+		data['10yr'] = content['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns10yr']
+	except:
+		data['10yr'] = "N/A"
 	# print(data)
 	# print('{} {} {} {} {} {} {} {} {}'.format(ticker, data['category'], data['star'], data['net'], data['ytd'], data['1yr'], data['3yr'], data['5yr'], data['10yr']))
 	print('{},{},{},{},{},{},{},{},{}'.format(ticker, data['category'], data['star'], data['net'], data['ytd'], data['1yr'], data['3yr'], data['5yr'], data['10yr']))
