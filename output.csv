@@ -1,0 +1,118 @@
+Ticker,Category,Stars,NET,YTD,1yr,3yr,5yr,10yr
+FNMIX,Emerging Markets Bond,4,0.82,-6.91,-6.45,5.26,4.77,6.84
+TGINX,Emerging Markets Bond,4,1.15,-6.09,0.02,6.14,3.80,7.72
+TGEIX,Emerging Markets Bond,4,0.87,-5.91,0.23,6.43,4.07,7.99
+FAGIX,High Yield Bond,5,0.67,2.42,5.31,7.20,7.27,9.00
+SPHIX,High Yield Bond,4,0.7,2.47,4.59,6.76,5.32,7.51
+JAHYX,High Yield Bond,4,0.87,1.08,1.61,4.56,4.45,7.36
+MWHYX,High Yield Bond,3,0.91,0.53,1.36,3.49,3.10,6.87
+NHFIX,High Yield Bond,3,0.82,1.61,3.02,4.67,4.42,6.90
+LSBRX,Multisector Bond,3,0.91,0.09,0.17,3.80,3.14,5.84
+BUFBX,Allocation--70% to 85% Equity,3,1.01,4.35,12.75,8.03,6.49,7.28
+FBALX,Allocation--50% to 70% Equity,5,0.55,7.53,12.78,10.85,10.42,8.46
+PVSAX,Allocation--70% to 85% Equity,1,0.95,-0.67,-12.51,-1.69,3.62,N/A
+PRWCX,Allocation--50% to 70% Equity,5,0.71,7.46,10.15,9.15,10.58,9.92
+VILLX,Allocation--70% to 85% Equity,3,0.94,14.01,11.69,6.14,5.03,9.33
+FCVSX,Convertibles,2,0.45,7.11,10.43,6.48,6.49,6.33
+FSRPX,Consumer Cyclical,5,0.78,25.79,47.62,20.76,20.67,19.84
+BIPIX,Trading--Leveraged Equity,N/A,1.45,12.10,10.89,-3.09,14.64,17.45
+FBIOX,Health,2,0.74,16.81,13.89,4.05,14.60,16.89
+FSPHX,Health,5,0.73,25.17,24.95,11.16,18.52,16.66
+FSMEX,Health,5,0.76,30.65,31.00,22.38,23.06,15.05
+FSDAX,Industrials,4,0.76,10.28,22.77,22.87,17.65,13.74
+FSCHX,Natural Resources,5,0.77,-0.57,11.16,18.14,12.30,12.09
+FSDPX,Natural Resources,4,0.79,-3.32,7.09,10.22,7.08,7.76
+REACX,Real Estate,2,1.15,3.66,3.13,4.94,7.55,6.35
+BREFX,Real Estate,3,1.32,-4.83,6.45,4.43,8.80,N/A
+CSRSX,Real Estate,4,0.97,5.14,3.91,6.41,8.67,8.32
+FSRPX,Consumer Cyclical,5,0.78,25.79,47.62,20.76,20.67,19.84
+TVRVX,Global Real Estate,4,1.36,-4.95,3.96,5.08,7.51,6.98
+FBSOX,Technology,4,0.77,24.86,38.94,22.12,20.71,17.48
+FSCSX,Technology,5,0.73,21.91,33.98,27.04,22.11,18.27
+GASFX,Utilities,3,1.01,1.75,-0.25,4.90,7.02,8.91
+MACSX,Pacific/Asia ex-Japan Stk,3,1.07,-6.09,-1.25,2.92,2.38,5.33
+FICDX,Miscellaneous Region,N/A,1.02,-1.01,5.13,7.50,4.21,1.85
+MCDFX,China Region,5,1.19,-3.33,18.41,13.31,12.64,N/A
+OBCHX,China Region,3,1.92,-9.34,12.05,9.19,10.02,8.62
+FJSCX,Japan Stock,3,0.95,-5.33,5.68,13.37,10.69,9.64
+FPBFX,Diversified Pacific/Asia,4,1.11,-5.30,5.56,13.12,10.59,9.60
+DREGX,Diversified Emerging Mkts,5,1.43,-8.07,6.70,8.66,5.04,5.12
+FEMKX,Diversified Emerging Mkts,4,0.97,-8.09,0.66,12.44,7.45,2.90
+HLEMX,Diversified Emerging Mkts,4,1.42,-7.88,4.25,9.51,6.42,3.90
+WAFMX,Diversified Emerging Mkts,1,2.36,-12.67,-1.12,-3.58,-2.00,N/A
+MISAX,Foreign Small/Mid Blend,4,1.53,-0.62,10.38,8.84,10.65,7.38
+WAIGX,Foreign Small/Mid Growth,3,1.46,8.16,15.22,9.48,8.58,10.26
+ARTIX,Foreign Large Growth,2,1.18,0.21,7.43,3.75,4.88,4.52
+ARTKX,Foreign Large Blend,5,1.24,-4.22,3.04,6.23,6.80,8.87
+DODFX,Foreign Large Blend,3,0.63,-6.69,0.92,4.25,5.57,4.34
+FDIVX,Foreign Large Growth,2,0.94,-1.32,4.10,6.35,6.88,3.99
+FIGRX,Foreign Large Growth,3,0.94,-2.93,3.41,6.71,6.67,4.48
+FOSFX,Foreign Large Growth,3,1,-0.30,5.84,8.80,9.01,4.83
+LISOX,Foreign Large Growth,3,1.06,0.33,9.35,4.02,5.34,5.44
+OAKIX,Foreign Large Blend,4,1,-9.63,1.12,6.38,5.87,8.74
+QFVOX,Foreign Large Value,5,1.51,-0.95,6.66,7.30,7.30,6.72
+FIVFX,Foreign Large Growth,4,1.12,0.47,7.81,10.71,10.33,7.67
+ARTHX,World Large Stock,4,1.4,10.36,19.52,9.22,9.90,N/A
+ARTGX,World Large Stock,4,1.27,0.22,7.32,8.53,8.79,10.07
+ARTRX,World Large Stock,5,1.15,8.16,12.96,12.48,12.31,N/A
+TOLLX,Infrastructure,4,1.4,-2.29,-1.01,2.61,5.49,7.35
+FWWFX,World Large Stock,4,0.81,11.47,19.48,13.53,11.57,8.53
+FPRAX,World Large Stock,3,1.44,4.64,12.23,11.37,7.24,8.74
+WWNPX,Mid-Cap Growth,3,1.74,22.14,33.67,18.45,13.72,9.49
+MGLBX,World Large Stock,5,1.8,19.72,22.62,12.77,13.06,10.04
+OAKWX,World Large Stock,4,1.19,-2.90,4.83,8.09,8.68,11.14
+TBGVX,Foreign Large Value,5,1.36,1.65,6.06,6.16,6.06,7.26
+AVPAX,Small Value,3,1.13,9.01,13.65,10.92,9.90,10.45
+HUSIX,Small Value,2,1.77,10.43,18.12,7.73,3.62,10.39
+SKSEX,Small Blend,3,1.19,5.91,9.22,7.95,9.12,12.04
+HYBUX,Small Blend,3,1.67,9.96,15.61,10.12,8.78,10.30
+HDPSX,Small Blend,2,1.3,12.75,23.06,6.52,8.98,10.44
+HSCSX,Small Blend,4,0.88,0.70,9.79,7.55,8.28,11.96
+BIAUX,Small Blend,4,1.31,8.93,12.76,10.89,10.61,N/A
+GTCSX,Small Blend,4,0.9,9.64,15.30,10.28,10.68,11.45
+BUFOX,Small Growth,3,1.5,19.91,19.25,10.83,9.88,13.81
+RYVPX,Small Growth,2,1.49,19.46,16.90,8.02,10.28,7.90
+PRNHX,Small Growth,5,0.78,25.07,27.71,16.24,16.22,15.98
+PRDSX,Small Growth,4,0.79,16.42,19.83,11.59,13.33,12.97
+ACMVX,Mid-Cap Value,5,1.01,3.81,10.28,11.40,11.86,11.80
+HWMAX,Mid-Cap Value,2,1.28,8.89,13.76,7.65,7.56,12.18
+JMCVX,Mid-Cap Value,3,0.72,1.83,9.06,9.83,9.17,8.23
+PYSAX,Mid-Cap Blend,1,0.48,8.85,-5.63,1.02,4.40,N/A
+VASVX,Mid-Cap Value,4,0.39,-3.58,6.46,8.73,9.42,10.83
+CAAPX,Mid-Cap Value,3,1.12,2.57,10.08,7.01,9.18,11.08
+FLPSX,Mid-Cap Value,5,0.68,2.81,12.67,10.02,10.28,10.42
+FLVCX,Mid-Cap Blend,2,0.8,4.84,13.79,9.77,8.93,7.25
+CHTTX,Mid-Cap Value,2,1.14,-1.50,3.19,7.87,7.85,10.06
+RYVFX,Small Value,2,1.51,13.83,22.81,8.21,6.70,6.21
+TMCTX,Mid-Cap Blend,3,1.44,10.94,20.63,11.34,11.04, 9.34
+VSEQX,Mid-Cap Blend,4,0.18,11.22,13.86,10.25,12.55,10.90
+AKREX,Large Growth,4,1.33,15.00,26.06,14.99,15.02,N/A
+ETGLX,Mid-Cap Growth,4,1.41,18.01,25.07,9.25,13.83,15.24
+HFCSX,Mid-Cap Growth,4,1.5,4.49,12.47,7.82,10.68,12.90
+POAGX,Mid-Cap Growth,5,0.64,19.85,28.51,17.56,18.25,17.89
+RYPRX,Small Growth,2,1.16,9.52,18.90,12.86,9.82,9.07
+VLEOX,Small Growth,4,1.21,13.87,17.09,11.97,12.04,10.50
+DODGX,Large Value,4,0.52,7.34,14.91,12.20,12.63,10.09
+LEXCX,Large Value,3,0.59,4.79,17.64,11.32,9.04,9.17
+SSHFX,Large Value,2,0.91,4.03,9.06,8.58,10.45,8.30
+FDSTX,Large Value,4,1.69,-0.34,9.23,8.83,8.72,11.87
+FGRIX,Large Blend,2,0.63,6.76,17.14,13.83,11.95,7.86
+FLCSX,Large Blend,3,0.67,7.84,18.20,14.35,12.76,11.58
+FGRTX,Large Blend,3,0.68,7.48,16.85,14.00,12.40,10.44
+GABEX,Large Blend,2,1.39,2.41,8.59,6.97,7.59,8.10
+MPGFX,Large Blend,3,0.64,7.06,11.73,10.51,10.21,10.56
+PRBLX,Large Blend,4,0.87,10.33,15.57,10.75,11.97,10.72
+SMVLX,Large Blend,3,1.29,5.11,12.41,7.69,10.56,11.76
+VCVLX,Large Value,2,0.27,3.91,10.44,5.62,6.69,10.07
+VDIGX,Large Blend,4,0.26,8.12,13.71,10.76,11.37,10.40
+VICEX,Large Blend,3,1.53,-6.19,7.98,9.61,9.53,9.32
+YAFFX,Large Blend,4,1.27,6.25,12.46,11.76,9.21,13.12
+YACKX,Large Value,4,0.76,6.08,12.27,10.56,8.93,12.69
+VHCOX,Large Growth,4,0.44,14.78,22.37,15.45,16.32,12.80
+SHRAX,Large Growth,2,1.12,10.54,11.28,6.90,10.06,10.44
+FCNTX,Large Growth,4,0.74,16.68,25.56,18.41,16.67,12.15
+FTQGX,Large Growth,3,0.57,21.24,31.69,18.86,15.12,11.94
+FOCPX,Large Growth,5,0.81,21.26,29.40,23.59,20.38,16.17
+PARWX,Large Blend,5,0.92,5.11,11.81,13.68,15.17,14.67
+MXXVX,Large Blend,4,1.08,-0.23,12.30,10.80,10.86,13.77
+TRBCX,Large Growth,5,0.7,18.53,24.98,16.10,17.75,13.41

@@ -73,7 +73,7 @@ def createFiles2(cusip):
 
 def getCusip3(jsonObj, ticker):
 	for elm in jsonObj:
-		getData2(jsonObj['model'], ticker)
+		return(getData2(jsonObj['model'], ticker))
 
 def getData2(content, ticker):
 	data = {}
@@ -122,7 +122,10 @@ def getData2(content, ticker):
 		data['10yr'] = "N/A"
 	# print(data)
 	# print('{} {} {} {} {} {} {} {} {}'.format(ticker, data['category'], data['star'], data['net'], data['ytd'], data['1yr'], data['3yr'], data['5yr'], data['10yr']))
-	print('{},{},{},{},{},{},{},{},{}'.format(ticker, data['category'], data['star'], data['net'], data['ytd'], data['1yr'], data['3yr'], data['5yr'], data['10yr']))
+	
+
+	# print('{},{},{},{},{},{},{},{},{}'.format(ticker, data['category'], data['star'], data['net'], data['ytd'], data['1yr'], data['3yr'], data['5yr'], data['10yr']))
+	return('{},{},{},{},{},{},{},{},{}'.format(ticker, data['category'], data['star'], data['net'], data['ytd'], data['1yr'], data['3yr'], data['5yr'], data['10yr']))
 	
 
 def createFiles3(cont):
@@ -132,91 +135,30 @@ def createFiles3(cont):
 	htmlFile = 'https://fundresearch.fidelity.com/api/mutual-funds/header/' + cusip
 	response = requests.get(htmlFile)
 	try:
-		getCusip3(response.json(), ticker)
+		return(getCusip3(response.json(), ticker))
 	except:
-		print('{} - !!!! NO DATA FOUND'.format(ticker))
+		return(('{} - !!!! NO DATA FOUND'.format(ticker)))
+
+def listMaker(filename):
+	with open(filename) as f:
+		lines = f.read().splitlines()
+	return lines
 
 
 
 
 
 if __name__ == "__main__":
-	# readJSONFile(sys.argv[1])
-
-
 	# createFiles(sys.argv[1])
 	# createFiles2(sys.argv[1])
-	createFiles3(sys.argv[1])
 
+	res = []
+	res.append("Ticker,Category,Stars,NET,YTD,1yr,3yr,5yr,10yr")
 
+	lines = listMaker('input.csv')
+	for elem in lines:
+		res.append(createFiles3(elem))
 
-
-
-
-
-
-
-
-
-
-
-		# print(jsonObj['model']['DetailsData']['detailDataList'][0]['expRatioGross']['value']) #NET
-		# print(jsonObj['model']['MStarRatingsData']['stardata'][0]['starOverallRating']) #star
-		# print(jsonObj['model']['FundInformationData']['fundInformationData']['mstarCtgyName']) #category
-		# print(jsonObj['model']['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['cumulativeReturnsYtd']) #ytd
-		# print(jsonObj['model']['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns1yr']) #1yr
-		# print(jsonObj['model']['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns3yr']) #3yr
-		# print(jsonObj['model']['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns5yr']) #5yr
-		# print(jsonObj['model']['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns10yr']) #10yr
-
-
-
-
-
-
-
-
-
-
-'''
-def getData(jsonObj):
-	for elm in jsonObj:
-		# print(jsonObj['FAGIX']['Cusip'])
-		# print(jsonObj[ticker]['Cusip'])
-		
-		# return jsonObj['model']
-		print(elm)
-		# print(jsonObj['FAGIX']['Cusip'])
-		# print(jsonObj[ticker]['Cusip'])
-	# print(jsonObj['model']['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'])
-
-def getData(cusip):
-	htmlFile = "https://fundresearch.fidelity.com/api/mutual-funds/header/" + cusip
-	response = requests.get(htmlFile)
-	# print(response.json())
-	getData(response.json())
-
-	# getData(response.json())
-
-
-'''
-
-
-
-
-
-
-
-
-#FAGIX
-'''
-Stars = 5
-YTD = 2.42
-1 Yr = 5.31
-3 Yr = 7.20
-5 Yr = 7.27
-10 Yr = 9.00
-NET = 0.67
-Ticker
-
-'''
+	# print(res)
+	with open('output.csv', 'w') as file_handle:
+		file_handle.writelines("%s\n" % place for place in res)
