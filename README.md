@@ -3,7 +3,7 @@ An automated application that inputs a list of mutual funds and outputs an excel
 
 
 Example of Input.csv
-  Fund Ticker, Fund Cusip ID
+  > Fund Ticker, Fund Cusip ID
   
 Example of Output.csv
-  Ticker, Category, Stars, NET, YTD, 1yr, 3yr, 5yr, 10yr
+  > Ticker, Category, Stars, NET, YTD, 1yr, 3yr, 5yr, 10yr
