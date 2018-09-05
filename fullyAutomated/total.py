@@ -137,7 +137,7 @@ if __name__ == "__main__":
 		cnt+=1
 		res.append(createFiles(elem))
 
-	sortList = sorted(res, key=lambda x: x.split(',')[2])
+	sortList = sorted(res, key=lambda x: x.split(',')[0])
 	sortList.insert(0, "Ticker,Category,Stars,NET,YTD,1yr,3yr,5yr,10yr")
 
 
