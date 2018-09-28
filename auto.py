@@ -98,7 +98,6 @@ if __name__ == "__main__":
 		cnt+=1
 		res.append(createFiles(elem))
 
-	# print(res)
 
 	# sortList = sorted(res, key=lambda x: x.split(',')[2])
 	sortList = res
