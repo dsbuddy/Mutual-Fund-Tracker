@@ -1,0 +1,102 @@
+Ticker,Name,Category,Stars,NET,Gross,YTD,1yr,3yr,5yr,10yr
+AKREX,Akre Focus Fund Retail Class,Large Growth,5,1.32,1.32,N/A,  11.86,  15.71,  13.32,N/A
+AMAGX,Amana Mutual Funds Trust Growth Fund Investor,Large Growth,4,1.08,1.08,N/A,  11.30,  14.87,  12.47,  14.02
+ARSVX,AMG River Road Small Cap Value Fund Class N,Small Blend,3,1.43,1.43,N/A,   1.90,  11.60,   6.89,  11.70
+ARTFX,Artisan High Income Fund Investor Shares,High Yield Bond,5,1,1,N/A,   1.54,   7.38,N/A,N/A
+AUNAX,AB Municipal Bond Inflation Strategy Class A,Muni National Short,4,0.75,0.86,N/A,   0.85,   1.57,   1.28,N/A
+AZNAX,AllianzGI Income & Growth Fund Class A,Allocation--30% to 50% Equity,5,1.27,1.28,N/A,   1.60,   7.32,   5.44,  11.82
+BCHYX,American Century California High Yield Municipal Fund Investor Class,Muni California Long,4,0.5,0.5,N/A,   0.91,   3.15,   5.26,   6.55
+BDFFX,Baron Discovery Fund Retail Shares,Small Growth,5,1.35,1.47,N/A,  13.55,  22.75,  13.94,N/A
+BGSAX,BlackRock Technology Opportunities Fund Investor A Shares,Technology,4,1.17,1.42,N/A,   9.34,  20.86,  17.72,  18.83
+BRSDX,MFS Blended Research Small Cap Equity Fund Class A,Small Blend,5,0.99,1.31,N/A,   6.89,  11.72,N/A,N/A
+CIPMX,Champlain Mid Cap Fund Advisor Class,Mid-Cap Growth,5,1.15,1.15,N/A,  15.19,  15.89,  12.52,  15.86
+CVTRX,Calamos Growth & Income Fund Class A,Allocation--70% to 85% Equity,5,1.12,1.12,N/A,   4.99,   8.74,   7.61,  11.25
+DQIAX,Dreyfus Equity Income Fund Class A,Large Value,4,1.03,1.18,N/A,   7.47,  12.56,   9.85,  13.13
+EALDX,Eaton Vance Short Duration Government Income Fund Class A,Short Government,5,0.9,0.91,N/A,   2.30,   1.61,   1.66,   2.43
+EANAX,Eaton Vance National Municipal Income Fund Class A,Muni National Long,5,0.84,0.84,N/A,   1.67,   2.86,   5.04,   7.08
+EKBAX,Wells Fargo Diversified Capital Builder Fund - Class A,Allocation--70% to 85% Equity,5,1.12,1.12,N/A,   0.16,  12.00,  10.08,  13.67
+EKSAX,Wells Fargo Diversified Income Builder Fund - Class A,Allocation--15% to 30% Equity,5,0.85,1.05,N/A,  -2.56,   6.88,   5.42,  10.21
+FAMEX,FAM Equity-Income Fund Investor Class,Mid-Cap Blend,4,1.26,1.26,N/A,   8.95,  13.00,  10.15,  13.75
+FATRX,Frost Total Return Bond Fund Investor Class,Short-Term Bond,5,0.73,0.73,N/A,   1.02,   3.06,   2.77,   6.01
+FIREX,Fidelity<sup>&reg;</sup> International Real Estate Fund,Global Real Estate,3,1.05,1.05,N/A,  -1.01,   6.24,   4.89,  10.15
+FISMX,Fidelity<sup>&reg;</sup> International Small Cap Fund,Foreign Small/Mid Blend,5,1.25,1.25,N/A,  -8.64,   8.74,   5.57,  13.10
+FLMFX,Meeder Muirfield Fund Retail Class,Tactical Allocation,4,1.39,1.39,N/A,   0.32,   7.40,   6.47,   9.44
+FMOTX,Nuveen Missouri Municipal Bond Fund Class A,Muni Single State Long,5,0.78,0.78,N/A,   1.02,   2.33,   3.91,   5.51
+FNGAX,Franklin International Growth Fund Class A,Foreign Large Growth,5,1.12,1.26,N/A,  -4.63,   8.01,   4.63,  10.58
+FRBAX,John Hancock Regional Bank Fund Class A,Financial,4,1.24,1.24,N/A,  -3.33,  12.56,  11.83,  11.96
+FSDAX,Fidelity<sup>&reg;</sup> Select Defense and Aerospace Portfolio,Industrials,5,0.76,0.76,N/A,   4.93,  17.49,  12.64,  17.90
+FSHCX,Fidelity<sup>&reg;</sup> Select Health Care Services Portfolio,Health,5,0.77,0.77,N/A,  26.87,  18.41,  16.70,  20.95
+FSMEX,Fidelity<sup>&reg;</sup> Select Medical Technology and Devices Portfolio,Health,5,0.76,0.76,N/A,  22.65,  20.81,  19.25,  19.37
+FSRPX,Fidelity<sup>&reg;</sup> Select Retailing Portfolio,Consumer Cyclical,5,0.78,0.78,N/A,  16.53,  13.45,  14.75,  23.09
+FSUTX,Fidelity<sup>&reg;</sup> Select Utilities Portfolio,Utilities,4,0.78,0.78,N/A,   7.88,  14.95,  10.96,  11.50
+FTQGX,Fidelity<sup>&reg;</sup> Focused Stock Fund,Large Growth,3,0.57,0.57,N/A,  14.47,  15.05,  11.19,  15.26
+FWRLX,Fidelity<sup>&reg;</sup> Select Wireless Portfolio,Communications,4,0.83,0.83,N/A,   1.64,   9.99,   7.47,  14.66
+GHYAX,Goldman Sachs High Yield Municipal Fund Class A,High Yield Muni,4,0.85,0.92,N/A,   5.19,   5.57,   6.70,   7.51
+GIBLX,Guggenheim Total Return Bond Fund Class P,Intermediate-Term Bond,5,0.83,0.93,N/A,   0.25,   3.74,   4.04,N/A
+GILPX,Guggenheim Limited Duration Fund Class P,Short-Term Bond,5,0.76,0.86,N/A,   1.60,   2.67,N/A,N/A
+GISOX,Grandeur Peak International Stalwarts Fund Investor Class,Foreign Small/Mid Blend,5,1.19,1.19,N/A,  -8.06,   8.39,N/A,N/A
+GSMIX,Goldman Sachs Dynamic Municipal Income Fund Class A,Muni National Interm,5,0.76,0.8,N/A,   3.29,   3.21,   4.02,   5.60
+GURPX,Guggenheim Risk Managed Real Estate Fund Class P,Real Estate,5,1.32,1.51,N/A,   2.34,   7.70,N/A,N/A
+HJPNX,Hennessy Japan Fund Investor Class,Japan Stock,5,1.47,1.47,N/A,   1.59,  12.94,  12.04,  13.45
+IDITX,Transamerica Bond Class A,Intermediate-Term Bond,5,0.9,0.9,N/A,  -0.68,   2.80,   2.47,   7.15
+IVOAX,Ivy Mid Cap Income Opportunities Fund Class A,Mid-Cap Value,5,1.35,1.4,N/A,   6.38,  11.85,N/A,N/A
+IYSAX,Ivy Small Cap Core Fund Class A,Small Blend,4,1.46,1.46,N/A,   1.06,  12.38,   8.90,  13.00
+JABAX,Janus Henderson Balanced Fund Class T,Allocation--50% to 70% Equity,5,0.83,0.83,N/A,   6.38,   8.83,   7.63,  10.56
+JAGIX,Janus Henderson Growth And Income Fund Class T,Large Blend,5,0.88,0.88,N/A,   8.74,  14.12,  11.65,  15.00
+JENSX,Jensen Quality Growth Fund Class J,Large Growth,4,0.88,0.88,N/A,  11.46,  14.98,  12.28,  13.91
+JERTX,Janus Henderson Global Real Estate Fund Class T,Global Real Estate,5,1.04,1.04,N/A,   3.33,   6.97,   6.95,  14.11
+KSCOX,Kinetics Small Capital Opportunities Fund No Load Class,Small Blend,4,1.66,1.8,N/A,  12.91,  16.83,   6.79,  15.92
+KTRAX,DWS Global Income Builder Fund - Class A,World Allocation,4,0.95,0.95,N/A,  -1.99,   6.77,   3.87,   7.88
+LCLAX,ClearBridge Select Fund Class A,Mid-Cap Growth,5,1.53,2.23,N/A,  23.36,  18.61,  14.77,N/A
+LGMAX,Loomis Sayles Global Allocation Fund Class A,World Allocation,5,1.18,1.18,N/A,   0.80,   7.79,   6.10,  12.27
+LTNYX,Oppenheimer Rochester<sup>&reg;</sup> Limited Term New York Municipal Fund Class A,Muni Single State Short,5,0.96,0.96,N/A,   9.90,   2.44,   2.39,   3.94
+MAAGX,MFS Aggressive Growth Allocation Fund Class A,Allocation--85%+ Equity,5,1.08,1.09,N/A,   1.59,   9.06,   7.02,  12.30
+MCDFX,Matthews China Dividend Fund Investor Class,China Region,5,1.19,1.19,N/A,  -4.94,  11.13,   8.18,N/A
+MDDCX,BlackRock Emerging Markets Fund, Inc. Investor A Shares,Diversified Emerging Mkts,4,1.24,1.56,N/A,  -5.04,  11.01,   2.16,   9.08
+MDIDX,MFS International Diversification Fund Class A,Foreign Large Blend,5,1.12,1.14,N/A,  -5.30,   6.60,   3.58,   9.20
+MECMX,BlackRock California Municipal Opportunities Fund Investor A Shares,Muni California Intermediate,5,0.8,0.82,N/A,   2.44,   3.04,   4.85,   5.87
+MEMTX,Blackrock Strategic Municipal Opp Fd Of Blackrock Muni Series Tr Investor A Shares,Muni National Interm,4,0.98,1.03,N/A,   2.46,   3.55,   4.32,   5.45
+MENKX,BlackRock New York Municipal Opportunities Fund Investor A Shares,Muni New York Intermediate,5,0.89,0.97,N/A,   2.36,   3.17,   5.08,   5.72
+MFAPX,Morgan Stanley Institutional Fund, Inc. International Advantage Portfolio Class A,Foreign Large Growth,5,1.33,1.42,N/A,   1.78,  12.44,  10.56,N/A
+MFXAX,Morgan Stanley Institutional Fund Trust Core Plus Fixed Income Portfolio Class A,Intermediate-Term Bond,5,0.77,1.02,N/A,  -1.53,   4.73,   4.33,   5.73
+MGFIX,AMG Managers Loomis Sayles Bond Fund Class N,Intermediate-Term Bond,5,0.99,0.99,N/A,  -2.02,   2.82,   2.58,   7.64
+MGGPX,Morgan Stanley Institutional Fund, Inc. Global Opportunity Portfolio Class A,World Large Stock,5,1.32,1.32,N/A,   2.75,  14.09,  15.00,  20.78
+MGLAX,MFS Global Real Estate Fund Class A,Global Real Estate,5,1.35,1.43,N/A,   2.78,   7.16,   7.30,N/A
+MGRAX,MFS International Growth Fund Class A,Foreign Large Growth,4,1.15,1.15,N/A,  -3.25,   7.92,   4.23,   9.64
+MIOPX,Morgan Stanley Institutional Fund, Inc. International Opportunity Portfolio Class A,Foreign Large Growth,5,1.29,1.36,N/A,  -3.59,  11.11,  10.22,N/A
+MOTIX,BNY Mellon Municipal Opportunities Fund Class Investor,Muni National Interm,5,0.99,0.99,N/A,   2.76,   2.73,   4.27,   6.44
+MPACX,Matthews Asia Growth Fund Investor Class,Diversified Pacific/Asia,4,1.12,1.12,N/A,  -3.93,   9.29,   5.60,  12.57
+MRGAX,MFS Core Equity Fund Class A,Large Blend,5,1.02,1.02,N/A,   5.87,  12.53,  10.61,  14.99
+MWOFX,MFS Global Growth Fund Class A,World Large Stock,4,1.4,1.44,N/A,   3.41,  10.88,   7.92,  12.22
+NCHAX,Nuveen California High Yield Municipal Bond Fund Class A,Muni California Long,5,1.05,1.05,N/A,   0.14,   3.30,   6.79,   9.20
+NDVAX,MFS New Discovery Value Fund Class A,Small Value,5,1.33,1.33,N/A,  -0.18,  11.26,   8.01,N/A
+OLCAX,Oppenheimer Rochester<sup>&reg;</sup> Limited Term California Municipal Fund Class A,Muni Single State Short,5,0.98,0.98,N/A,   6.61,   2.46,   2.80,   4.47
+OPCAX,Oppenheimer Rochester<sup>&reg;</sup> California Municipal Fund Class A,Muni California Long,5,1.07,1.07,N/A,   6.95,   4.90,   6.19,   9.01
+OPNYX,Oppenheimer Rochester<sup>&reg;</sup> AMT-Free New York Municipals Fund Class A,Muni New York Long,5,1.02,1.02,N/A,   6.92,   3.89,   5.37,   7.55
+OPTAX,Oppenheimer Rochester<sup>&reg;</sup> AMT-Free Municipals Fund Class A,High Yield Muni,5,1.04,1.04,N/A,   8.07,   5.33,   6.93,   8.67
+ORSTX,Oppenheimer Short Term Municipal Fund Class A,Muni National Short,5,0.86,0.86,N/A,   1.09,   1.46,   1.87,N/A
+PBLAX,Principal Blue Chip Fund Class A,Large Growth,4,1.15,1.15,N/A,  11.45,  14.99,  12.74,N/A
+PFANX,PIMCO Preferred and Capital Securities Fund Class A,Preferred Stock,5,1.15,1.22,N/A,  -3.13,   5.42,N/A,N/A
+PIAFX,Invesco Multi-Asset Income Fund Class A,Allocation--15% to 30% Equity,5,0.85,1.06,N/A,  -3.18,   5.40,   5.28,N/A
+PRGSX,T. Rowe Price Global Stock Fund,World Large Stock,5,0.84,0.84,N/A,   4.56,  13.15,  11.42,  14.94
+PRJPX,T. Rowe Price Japan Fund,Japan Stock,4,0.97,0.98,N/A,  -2.51,  12.70,   8.88,   9.47
+PRSNX,T. Rowe Price Global Multi-Sector Bond Fund Investor Class,World Bond,5,0.64,0.72,N/A,  -0.29,   3.87,   3.25,N/A
+PSHAX,PIMCO Short-Term Fund Class A,Ultrashort Bond,5,0.82,0.82,N/A,   1.67,   2.10,   1.58,   2.36
+PZRMX,PIMCO Inflation Response Multi-Asset Fund Class A,Allocation--15% to 30% Equity,2,1.67,1.96,N/A,  -1.71,   4.39,   1.42,N/A
+RAANX,Altegris/AACA Opportunistic Real Estate Fund N,Real Estate,5,2.57,2.57,N/A,  -8.31,   8.83,N/A,N/A
+RBBAX,Columbia Income Builder Fund Class A,Allocation--15% to 30% Equity,5,1,1,N/A,   0.16,   4.97,   4.05,   7.39
+RPFRX,Davis Real Estate Fund Class A,Real Estate,4,0.97,0.97,N/A,   4.22,   7.37,  10.10,  13.52
+RYOFX,Royce Opportunity Fund Service Class,Small Value,4,1.49,1.53,N/A,  -6.82,  10.83,   5.03,  15.62
+SGIDX,Crossmark Steward Global Equity Income Fund Class A,World Large Stock,5,0.99,0.99,N/A,   1.70,  10.91,   8.48,  11.51
+SIUPX,Guggenheim Investment Grade Bond Fund Class P,Intermediate-Term Bond,5,0.81,1.03,N/A,   0.40,   3.60,   3.91,   5.32
+SRCMX,Principal California Municipal Fund Class A,Muni California Intermediate,5,0.82,0.82,N/A,  -0.12,   2.12,   4.55,   6.00
+TAIFX,American Funds Tax-Advantaged Growth and Income Portfolio Class F-1,Allocation--30% to 50% Equity,5,0.73,0.73,N/A,   1.85,   6.42,   6.35,N/A
+THOPX,Thompson Bond Fund,Short-Term Bond,5,0.71,0.71,N/A,   2.43,   5.00,   2.99,   6.47
+TMSIX,Thrivent Mid Cap Stock Fund Class S,Mid-Cap Blend,5,0.72,0.72,N/A,   1.41,  14.05,  12.32,  16.55
+VALIX,Value Line Capital Appreciation Fund, Inc. Investor Class,Allocation--70% to 85% Equity,5,1.11,1.11,N/A,   6.39,  10.01,   8.37,  10.44
+VISAX,Virtus KAR International Small-Cap Fund Class A,Foreign Small/Mid Blend,5,1.65,1.73,N/A,  -0.25,  15.13,   7.64,N/A
+VMPAX,Wells Fargo Strategic Municipal Bond Fund - Class A,Muni National Short,5,0.82,0.82,N/A,   1.43,   1.68,   2.16,   2.99
+WBSNX,William Blair Small Cap Growth Fund Class N,Small Growth,5,1.5,1.54,N/A,  12.47,  18.18,  11.06,  18.13
+WCMRX,WCM Focused International Growth Fund Investor Class,Foreign Large Growth,5,1.31,1.31,N/A,  -1.80,   7.72,   6.23,N/A
+WMICX,Wasatch Micro Cap Fund,Small Growth,5,1.67,1.67,N/A,  16.95,  18.23,  11.37,  17.01
+WWNPX,Kinetics Paradigm Fund No Load Class,Mid-Cap Growth,3,1.64,1.74,N/A,   7.68,  14.48,   7.91,  13.62

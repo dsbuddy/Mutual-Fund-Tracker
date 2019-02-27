@@ -1,0 +1,5 @@
+To setup shortcut for automation on Windows:
+	1) Create Shortcut of "auto.py"
+	2) Make Target:
+		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command "python auto.py"
+	3) Run Shortcut
