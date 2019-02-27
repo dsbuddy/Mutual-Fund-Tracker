@@ -1,0 +1,210 @@
+{
+  "FundPrfm": {
+    "QuarterlyPrfmDetails": {
+      "LoadAdjAvgAnnRtrnsBeforeTax": {
+        "Yr3": "27.87",
+        "Yr1": "26.67",
+        "LOF": "6.29",
+        "Yr10": "16.39",
+        "Yr5": "21.46"
+      },
+      "AsOfDt": "09/30/2018",
+      "AvgAnnRtrnsBeforeTax": {
+        "Yr3": "30.19",
+        "Yr1": "33.69",
+        "LOF": "6.6",
+        "Yr10": "17.01",
+        "Yr5": "22.78"
+      },
+      "LoadAdjAvgAnnRtrnsAfterTaxSale": {
+        "Yr3": "22.02",
+        "Yr1": "16.72",
+        "LOF": "5.24",
+        "Yr10": "13.92",
+        "Yr5": "17.44"
+      },
+      "AvgAnnRtrnsAfterTaxDistribution": {},
+      "LoadAdjAvgAnnRtrnsAfterTaxDistribution": {
+        "Yr3": "26.94",
+        "Yr1": "24.33",
+        "LOF": "6.17",
+        "Yr10": "16.13",
+        "Yr5": "20.93"
+      },
+      "AvgAnnRtrnsAfterTaxSale": {}
+    },
+    "DailyPrfmDetails": {
+      "Daily": "   0.85",
+      "AsOfDt": "12/27/2018",
+      "YTD": "   1.03",
+      "MTD": "-7.94511872"
+    },
+    "MonthlyPrfmDetails": {
+      "AsOfDt": "11/30/2018",
+      "AvgAnnRtrns": {
+        "Yr3": "  20.86",
+        "Yr1": "   9.34",
+        "LOF": "   5.80",
+        "Yr10": "  18.83",
+        "Yr5": "  17.72"
+      },
+      "LoadAdjAvgAnnRtrns": {
+        "LOF": "5.49",
+        "YTD": "9.76",
+        "Yr5": "16.45",
+        "Yr3": "18.71",
+        "Yr1": "3.6",
+        "Yr10": "18.19"
+      },
+      "LoadAdjCumRtrns": {
+        "Mo3": "-17.09",
+        "YTD": "3.99",
+        "Mo1": "-4.92",
+        "Mo6": "-9.53"
+      },
+      "BenchMarkAvgAnnLOF": {},
+      "CumRtrns": {
+        "Mo3": "-12.49",
+        "Mo1": ".35",
+        "Mo6": "-4.52"
+      },
+      "CalYrRtrns": {
+        "Yr2": "   7.83",
+        "Yr9": "  56.21",
+        "Yr7": " -11.31",
+        "Yr5": "  44.93",
+        "Yr3": "  11.22",
+        "Yr1": "  49.73",
+        "Yr4": "   8.65",
+        "Yr8": "  17.99",
+        "Yr6": "   7.25",
+        "Yr10": " -39.89"
+      }
+    }
+  },
+  "Ticker": "BGSAX",
+  "FundPick": {
+    "PublicationTxt": "Fidelity Fund Pick",
+    "AsOfDt": "10/16/2018",
+    "PublicationId": "1",
+    "PublicationNm": "Fidelity Fund Pick"
+  },
+  "ExpenseAndFees": {
+    "ManagementFee": "0.82",
+    "TurnoverPctDt": "09/30/2018",
+    "TurnoverPct": "49",
+    "GrossXpnsRatioProspectus": "1.42",
+    "NetXpnsRatioAnnReport": "1.17"
+  },
+  "Cusip": "091929570",
+  "FPRSFundCode": "OUAH",
+  "FundMstarCategoryDetails": {
+    "MorningStarStyleBox": {
+      "MstarStyleNm": "Large Growth",
+      "PercentOfAssetsCovered": "74.78",
+      "EquityStyleBoxCode": "LG",
+      "FixedIncomeStyleBoxCode": "LG"
+    },
+    "MStarRanking": {
+      "AsOfDt": "11/30/2018",
+      "MstarCategoryCd": "ST",
+      "PcntRankingCumMo3": "37",
+      "Rank": {
+        "YTD": "30",
+        "Calendar": {
+          "Yr3": "3",
+          "Yr1": "9",
+          "Yr2": "62",
+          "Yr4": "76",
+          "Yr5": "17"
+        },
+        "Yr5": "18",
+        "Yr3": "10",
+        "Yr1": "33",
+        "Mo3": "67",
+        "Mo1": "59",
+        "Yr10": "56"
+      }
+    },
+    "MStarRating": {
+      "RiskRatingYr3": "4",
+      "PrfmRatingYr3": "5",
+      "AsOfDt": "11/30/2018",
+      "FeeRatingYr3": "3",
+      "Overall": "4",
+      "Yr5": "4",
+      "Yr3": "5",
+      "TotalFunds": {
+        "YTD": "182",
+        "Calendar": {
+          "Yr3": "203",
+          "Yr1": "205",
+          "Yr2": "207",
+          "Yr4": "207",
+          "Yr5": "199"
+        },
+        "Yr5": "174",
+        "Yr3": "182",
+        "Yr1": "207",
+        "Mo3": "230",
+        "Mo1": "233",
+        "Yr10": "140"
+      },
+      "Yr10": "3"
+    }
+  },
+  "FundInfo": {
+    "AssetCategoryCd": "SPL",
+    "FPRSAssetClassNm": "Stock",
+    "PrimaryBmkVendorNm": "Morgan Stanley",
+    "PrimaryBmkLegalNm": "MSCI All Countries World Information Technology (Net)",
+    "MstarAssetClassNm": "Sector Equity",
+    "RegisteredOutsideMMInd": "N",
+    "RegistrationInd": "Y",
+    "Ticker": "BGSAX",
+    "ManagementCompanyNm": "BlackRock",
+    "LegalNm": "BlackRock Technology Opportunities Fund Investor A Shares",
+    "MstarAssetClassCd": "SSTK",
+    "PrimaryBmkIndexCd": "MS280",
+    "LoadTypeCd": "S",
+    "FPRSAssetClassCd": "STCK ",
+    "FundStatusCd": "OPEN",
+    "InvestmentTypeCd": "MFN",
+    "MstarCategoryId": "ST",
+    "SocRespInd": "N",
+    "ShortNm": "BLKRK TECH OP A",
+    "MstarProspObjCd": "ST",
+    "MstarCategoryNm": "Technology",
+    "ChrtTypeCd": "VAR",
+    "LeverageInd": "N",
+    "ManagementCompanyId": "0C000034YC",
+    "LongNm": "BLACKROCK Technology Opp A",
+    "FprsFundCd": "OUAH",
+    "PrimaryFundInd": [
+      "Y",
+      "Y"
+    ],
+    "PrimaryBmkIndexNm": "MSCI AC W Technology (N)",
+    "InverseInd": "N",
+    "AssetCategoryOverrideInd": "N",
+    "VRSCd": "019886",
+    "BreakPointPricingInd": "Y",
+    "FreedomFundAssetAllocationInd": "N",
+    "TrusteeNm": "NOT APPLICABLE",
+    "MstarProspObjNm": "Specialty - Technology",
+    "AssetAllocationOverTimeInd": "N",
+    "InceptionDt": "05/15/2000",
+    "ReimbursementInd": "N",
+    "InvestmentType": "MUTUAL FUND",
+    "ChrtTypeNm": "VARIABLE RETURN",
+    "IndexFundInd": "N",
+    "BusinessChannel": "RETAIL",
+    "ManagedBy": "EXTERNALLY MANAGED",
+    "Cusip": "091929570",
+    "NTFInd": "Y",
+    "CmptFundInd": "N",
+    "OperationalStyle": "ACTIVE",
+    "DeadFundInd": "N",
+    "OperationalStyleCd": "ACT"
+  }
+}
