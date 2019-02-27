@@ -1,6 +1,8 @@
 # MutualFundTracker Top Picks
 An automated application that outputs an excel spreadsheet of Fidelity's top mutual funds picks along with performance and additional features
 
+## Deployment
+
 To run Top Picks:
   > Double click the 'Get Top Picks' shortcut
   > A dialog should pop up displaying the program's process
@@ -11,7 +13,7 @@ Example of Output.csv
 
 
 
-
+### Prerequisites
 
 Don't have Python?
   > Open 'https://www.python.org/downloads/release/python-372/' in your favorite web browser

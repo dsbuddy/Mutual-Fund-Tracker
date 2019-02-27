@@ -1,6 +1,8 @@
 # MutualFundTracker
 An automated application that inputs a list of mutual fund tickers with custom comments and outputs an excel spreadsheet of the mutual funds along with performance and additional features
 
+## Deployment
+
 To set up Fund Tracker:
   > Open input.csv with Excel (or your favorite CSV editor)
   > Enter ticker names of mutual funds in the first column
@@ -18,7 +20,7 @@ Example of Output.csv
   > Ticker, Cusip, Category, Stars, NET, YTD, 1yr, 3yr, 5yr, 10yr
 
 
-
+### Prerequisites
 
 
 Don't have Python?
