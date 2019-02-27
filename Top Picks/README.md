@@ -8,7 +8,7 @@ To run Top Picks:
   > A dialog should pop up displaying the program's process
   > Once the pop up goes away, open topPicks.csv with Excel (or your favorite CSV editor) to view the results
   
-Example of Output.csv
+Example of topPicks.csv
   > Ticker, Name, Category, Stars, NET, YTD, 1yr, 3yr, 5yr, 10yr
 
 
