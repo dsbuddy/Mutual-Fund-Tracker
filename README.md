@@ -1,4 +1,4 @@
-# MutualFundTracker
+# Mutual-Fund-Tracker
 An automated application that inputs a list of mutual fund tickers with custom comments and outputs an excel spreadsheet of the mutual funds along with performance and additional features
 
 ## Deployment
