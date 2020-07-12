@@ -17,7 +17,7 @@ To run Fund Tracker:
   > Once the pop up goes away, open output.csv with Excel (or your favorite CSV editor) to view the results
   
 Example of Output.csv
-  > Ticker, Cusip, Category, Stars, NET, YTD, 1yr, 3yr, 5yr, 10yr
+  > Ticker, Cusip, Category, Stars, NET, YTD, 1yr, 3yr, 5yr, 10yr, 10YrG
 
 
 ### Prerequisites
