@@ -1,160 +1,115 @@
 import os
 import sys
 import json
+import csv
 import requests
+from pprint import pprint
 
 
-def getCusip(jsonObj, ticker):
-	for elm in jsonObj:
-		return jsonObj[ticker]['Cusip']
+FILE_DELIMITER = ','
 
-def createCusipFiles(filename):
+
+def process_input_data(filename):
 	cnt = 0
-	content = []
-	res = []
-	total = sum(1 for line in open(filename))
-	with open(filename, 'r') as ins:
-		for line in ins:
-			progress(cnt, ((total*2)-1), "Finding Cusip IDs")
-			cnt+=1
-			stuff = line.split(',')
-			ticker = stuff[0].strip()
-			ticker = ticker.upper()
-			# line=line.strip()
-			jsonFile = ticker + ".json"
-			params = (
-			    ('fIds', ticker),
-			)
-			response = requests.get('https://www.fidelity.com/evaluator/compare', params=params)
+	input_rows = []
 
-			try:
-				extra = stuff[1]
-			except:
-				extra = ""
+	# Read in file
+	with open(filename, 'r') as f:
+		for line in f:
+			# Update progress bar
+			display_progress_bar(cnt, sum(1 for line in open(filename)), "Finding Cusip IDs")
+			cnt += 1
+
+			# Parse input
+			cusip_contents = line.split(FILE_DELIMITER)
+			ticker = cusip_contents[0].strip().upper()
+			comments = cusip_contents[1:]
+
+			# Make HTTP request to endpoint
+			response = requests.get('https://www.fidelity.com/evaluator/compare', params=(('fIds', ticker),))
+
+			# Parse HTTP response and check for valid cusip id
 			if ticker in response.json().keys():
-				res.append(ticker + "," + getCusip(response.json(), ticker) + "," + extra)
+				input_rows.append(ticker + FILE_DELIMITER + response.json()[ticker]['Cusip'] + FILE_DELIMITER + FILE_DELIMITER.join(comments))
 			else:
-				res.append(ticker + ",NO VALID CUSIP ID FOUND," + extra)
+				input_rows.append(ticker + FILE_DELIMITER + "NO VALID CUSIP ID FOUND" + FILE_DELIMITER + FILE_DELIMITER.join(comments))
+	return input_rows
 
-
-	if os.path.isfile("tickersCusips.csv"):
-		os.remove("tickersCusips.csv")
-
-	with open('tickersCusips.csv', 'w') as file_handler:
-	    for item in res:
-	    	progress(cnt, ((len(res)*2)-1), "Finding Cusip IDs")
-	    	cnt+=1
-	    	file_handler.write("{}".format(item))
-
-def listMaker(filename):
-	with open(filename) as f:
-		lines = f.read().splitlines()
-	return lines
-
-def progress(count, total, status=''):
+def display_progress_bar(count, total, status=''):
     bar_len = 60
-    filled_len = int(round(bar_len * count / float(total)))
+    if float(total) > 0:
+	    filled_len = int(round(bar_len * count / float(total)))
+	    percents = round(100.0 * count / float(total), 1)
+	    bar = '=' * filled_len + '-' * (bar_len - filled_len)
+	    sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
+	    sys.stdout.flush() 
 
-    percents = round(100.0 * count / float(total), 1)
-    bar = '=' * filled_len + '-' * (bar_len - filled_len)
-
-    sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
-    sys.stdout.flush() 
-
-
-
-
-
-
-
-
-
-
-
-
-
-def getCusip2(jsonObj, ticker, cusip, extra):
-	for elm in jsonObj:
-		return(getData(jsonObj['model'], ticker, cusip, extra))
-
-def getData(content, ticker, cusip, extra):
-	data = {}
+def get_hypothetical_growth(ticker):
+	endpoint = 'https://fundresearch.fidelity.com/fund-screener/api/search/v1/retail/hypo10k/investments?id=' + str(ticker) + '&period=10YR'
 	try:
-		data['net'] = content['DetailsData']['detailDataList'][0]['expRatioGross']['value']
+		# Make HTTP request to endpoint
+		response = requests.get(endpoint).json()
+		return response[ticker]['performance']['valueByDate'][-1]['amount']
 	except:
-		data['net'] = "N/A"
-	try:
-		data['star'] = content['MStarRatingsData']['stardata'][0]['starOverallRating']
-	except:
-		data['star'] = "N/A"
-	try:
-		data['category'] = content['FundInformationData']['fundInformationData']['mstarCtgyName']
-	except:
-		data['category'] = "N/A"
-	try:
-		data['ytd'] = content['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['cumulativeReturnsYtd']
-	except:
-		data['ytd'] = "N/A"
-	try:
-		data['net'] = content['DetailsData']['detailDataList'][0]['expRatioGross']['value']
-	except:
-		data['net'] = "N/A"
-	try:
-		data['1yr'] = content['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns1yr']
-	except:
-		data['1yr'] = "N/A"
-	try:
-		data['3yr'] = content['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns3yr']
-	except:
-		data['3yr'] = "N/A"
-	try:
-		data['5yr'] = content['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns5yr']
-	except:
-		data['5yr'] = "N/A"
-	try:
-		data['10yr'] = content['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns10yr']
-	except:
-		data['10yr'] = "N/A"
-	return('{},{},{},{},{},{},{},{},{},{},{}'.format(ticker, cusip, data['category'], data['star'], data['net'], data['ytd'], data['1yr'], data['3yr'], data['5yr'], data['10yr'],extra))
+		return "N/A"
 
-def createFiles(cont):
-	words = cont.split(',')
-	ticker = words[0]
-	cusip = words[1]
-	htmlFile = 'https://fundresearch.fidelity.com/api/mutual-funds/header/' + cusip
-	response = requests.get(htmlFile)
+def format_response_row(content):
+	# Parse input rows
+	ticker_contents = content.split(',')
+	ticker = ticker_contents[0]
+	cusip = ticker_contents[1]
+
+	# Send HTTP request to endpoint
+	endpoint = 'https://fundresearch.fidelity.com/api/mutual-funds/header/' + cusip
+	response = requests.get(endpoint)
+	comments = ticker_contents[2:]
+
 	try:
-		extra = words[2]
+		# Parse HTTP response
+		response_json = response.json()['model']
+		data = {}
+		params = [('net',response_json['DetailsData']['detailDataList'][0]['expRatioGross']['value']),('star',response_json['MStarRatingsData']['stardata'][0]['starOverallRating']),('category',response_json['FundInformationData']['fundInformationData']['mstarCtgyName']),('ytd',response_json['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['cumulativeReturnsYtd']),('1yr',response_json['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns1yr']),('3yr',response_json['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns3yr']),('5yr',response_json['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns5yr']),('10yr',response_json['PerformanceAvgAnnualReturnsData']['performanceAvgAnnualReturnsDataList'][0]['fundPerformanceRowDataList'][0]['averageAnnualReturns10yr'])]
+		for param in params:
+			try:
+				data[param[0]] = param[1]
+			except:
+				data[param[0]] = "N/A"
+
+		# Compute hypothetical growth of Mutual Fun
+		data['10yr_hypothetical_growth'] = get_hypothetical_growth(ticker)
+
+		# Format output row as list
+		col_vals = [ticker, cusip, data['category'], data['star'], data['net'], data['ytd'], data['1yr'], data['3yr'], data['5yr'], data['10yr'], data['10yr_hypothetical_growth']]
+		return FILE_DELIMITER.join(col_vals) + FILE_DELIMITER + FILE_DELIMITER.join(str(x) for x in comments)
+		# return FILE_DELIMITER.join("'"+x+"'" for x in col_vals) + FILE_DELIMITER + FILE_DELIMITER.join("'"+str(x)+"'" for x in comments)
 	except:
-		extra = ""
-	
-	try:
-		return(getCusip2(response.json(), ticker, cusip, extra))
-	except:
-		return(('{} - !!!! NO DATA FOUND'.format(ticker)))
+		return(('{} - !!!! NO DATA FOUND\n'.format(ticker)))
 
 
-if __name__ == "__main__":
-	# lines = createCusipFiles('tickers.txt')
-	lines = createCusipFiles('input.csv')
+def main():
+	output_rows = []
+	cnt = 0
+
+	# Remove old output
 	if os.path.isfile("output.csv"):
 		os.remove("output.csv")
-	res = []
 
-	lines = listMaker('tickersCusips.csv')
-	cnt = 0
-	for elem in lines:
-		progress(cnt, (len(lines)-1), "Calculating Performance Details")
-		cnt+=1
-		res.append(createFiles(elem))
+	# Parse input and compute performance details on input fields
+	parsed_input = process_input_data('input.csv')
+	for row in parsed_input:
+		display_progress_bar(cnt, (len(parsed_input)-1), "Finding Values")
+		cnt += 1
+		output_rows.append(format_response_row(row))
 
-	sortList = sorted(res, key=lambda x: x.split(',')[0])
-	sortList.insert(0, "Ticker,Cusip,Category,Stars,NET,YTD,1yr,3yr,5yr,10yr")
+	# Sort by tickers and insert header row
+	sorted_rows = sorted(output_rows, key=lambda x: x.split(FILE_DELIMITER)[0])
+	col_names = ['Ticker','Cusip','Category','Stars','NET','YTD','1yr','3yr','5yr','10yr','10YrG']
+	sorted_rows.insert(0, FILE_DELIMITER.join(col_names))
 
+	# Write all rows to csv
+	with open('output.csv', 'w') as f:
+		f.write("%s\n" % sorted_rows[0])
+		f.writelines("%s" % row for row in sorted_rows[1:])
 
-	with open('output.csv', 'w') as file_handle:
-		file_handle.writelines("%s\n" % place for place in sortList)
-
-	if os.path.isfile("tickersCusips.csv"):
-		os.remove("tickersCusips.csv")
-
+if __name__ == "__main__":
+	main()
