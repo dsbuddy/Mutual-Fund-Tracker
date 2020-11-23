@@ -8,32 +8,50 @@ from pprint import pprint
 
 FILE_DELIMITER = ','
 
+def ticker_to_cusip_id(ticker):
+	# Find cusip ID
+	endpoint = 'https://search.fidelity.com/search/getFundFactsResults?question=' + ticker
+	response = requests.get(endpoint)
+	html_string = ''
+
+	# Check for valid response
+	if response.status_code == 200:
+		html_string = str(response.text)
+	else:
+		print('Error finding cusip')
+		return None
+
+	# Parse cusip from HTML page
+	idx = html_string.find('https://fundresearch.fidelity.com/mutual-funds/summary/')
+	idx_cusip_start = idx + len('https://fundresearch.fidelity.com/mutual-funds/summary/')
+	idx_cusip_end = html_string.find('"', idx_cusip_start)
+	cusip = html_string[idx_cusip_start:idx_cusip_end]
+	return cusip
 
 def process_input_data(filename):
 	cnt = 0
+	total =  sum(2 for line in open(filename))
 	input_rows = []
 
 	# Read in file
 	with open(filename, 'r') as f:
 		for line in f:
 			# Update progress bar
-			display_progress_bar(cnt, sum(1 for line in open(filename)), "Finding Cusip IDs")
+			display_progress_bar(cnt, total, "Finding Cusip IDs")
 			cnt += 1
 
 			# Parse input
 			cusip_contents = line.split(FILE_DELIMITER)
 			ticker = cusip_contents[0].strip().upper()
 			comments = cusip_contents[1:]
+			cusip = ticker_to_cusip_id(ticker)
 
-			# Make HTTP request to endpoint
-			response = requests.get('https://www.fidelity.com/evaluator/compare', params=(('fIds', ticker),))
-
-			# Parse HTTP response and check for valid cusip id
-			if ticker in response.json().keys():
-				input_rows.append(ticker + FILE_DELIMITER + response.json()[ticker]['Cusip'] + FILE_DELIMITER + FILE_DELIMITER.join(comments))
+			# Save ticker, cusip, comments to array
+			if not (cusip is None):
+				input_rows.append(ticker + FILE_DELIMITER + cusip + FILE_DELIMITER + FILE_DELIMITER.join(comments))
 			else:
 				input_rows.append(ticker + FILE_DELIMITER + "NO VALID CUSIP ID FOUND" + FILE_DELIMITER + FILE_DELIMITER.join(comments))
-	return input_rows
+	return input_rows, cnt, total
 
 def display_progress_bar(count, total, status=''):
     bar_len = 60
@@ -42,16 +60,7 @@ def display_progress_bar(count, total, status=''):
 	    percents = round(100.0 * count / float(total), 1)
 	    bar = '=' * filled_len + '-' * (bar_len - filled_len)
 	    sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
-	    sys.stdout.flush() 
-
-def get_hypothetical_growth(ticker):
-	endpoint = 'https://fundresearch.fidelity.com/fund-screener/api/search/v1/retail/hypo10k/investments?id=' + str(ticker) + '&period=10YR'
-	try:
-		# Make HTTP request to endpoint
-		response = requests.get(endpoint).json()
-		return response[ticker]['performance']['valueByDate'][-1]['amount']
-	except:
-		return "N/A"
+	    sys.stdout.flush()
 
 def format_response_row(content):
 	# Parse input rows
@@ -75,11 +84,8 @@ def format_response_row(content):
 			except:
 				data[param[0]] = "N/A"
 
-		# Compute hypothetical growth of Mutual Fun
-		data['10yr_hypothetical_growth'] = get_hypothetical_growth(ticker)
-
 		# Format output row as list
-		col_vals = [ticker, cusip, data['category'], data['star'], data['net'], data['ytd'], data['1yr'], data['3yr'], data['5yr'], data['10yr'], data['10yr_hypothetical_growth']]
+		col_vals = [ticker, cusip, data['category'], data['star'], data['net'], data['ytd'], data['1yr'], data['3yr'], data['5yr'], data['10yr']]
 		return FILE_DELIMITER.join(col_vals) + FILE_DELIMITER + FILE_DELIMITER.join(str(x) for x in comments)
 		# return FILE_DELIMITER.join("'"+x+"'" for x in col_vals) + FILE_DELIMITER + FILE_DELIMITER.join("'"+str(x)+"'" for x in comments)
 	except:
@@ -95,15 +101,15 @@ def main():
 		os.remove("output.csv")
 
 	# Parse input and compute performance details on input fields
-	parsed_input = process_input_data('input.csv')
+	parsed_input, cnt, total = process_input_data('input.csv')
 	for row in parsed_input:
-		display_progress_bar(cnt, (len(parsed_input)-1), "Finding Values")
+		display_progress_bar(cnt, total, "Extracting Values")
 		cnt += 1
 		output_rows.append(format_response_row(row))
 
 	# Sort by tickers and insert header row
 	sorted_rows = sorted(output_rows, key=lambda x: x.split(FILE_DELIMITER)[0])
-	col_names = ['Ticker','Cusip','Category','Stars','NET','YTD','1yr','3yr','5yr','10yr','10YrG']
+	col_names = ['Ticker','Cusip','Category','Stars','NET','YTD','1yr','3yr','5yr','10yr']
 	sorted_rows.insert(0, FILE_DELIMITER.join(col_names))
 
 	# Write all rows to csv
